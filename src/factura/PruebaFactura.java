@@ -1,4 +1,4 @@
-package factura;
+package factura;// en teoría ya está listo xd
 
 import java.util.Scanner;
 
@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class PruebaFactura {
     public static void main(String[] args) {
         Factura f1 = new Factura();
+        Factura f2;
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Ingrese el Numero de pieza");
@@ -23,10 +24,13 @@ public class PruebaFactura {
         f1.setPrecioPieza(precioPieza);
 
 
+        f2=new Factura(numeroDePieza, DescripcionDePieza, (double) cantidad, (int) precioPieza);
 
-            System.out.println("El valor unitario de la pieza es: " +f1.getPrecioPieza());
-            System.out.println("La cantidad de piezas son: " +f1.getCantidadPiezas());
-            System.out.println("El total es: "+f1.montoFactura());
+
+
+            System.out.println("El valor unitario de la pieza es: " +f2.getPrecioPieza());
+            System.out.println("La cantidad de piezas son: " +f2.getCantidadPiezas());
+            System.out.println("El total es: "+f2.montoFactura());
 
 
 

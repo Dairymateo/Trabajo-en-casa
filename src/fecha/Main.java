@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Fecha f1 = new Fecha();
+        Fecha f2;
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Ingrese el mes: ");
@@ -20,11 +21,10 @@ public class Main {
         f1.setDia(dia);
         f1.setAnio(año);
 
-
-        System.out.println("La fecha ingresada es: " +f1.mostrarFecha());
-
+        f2=new Fecha(dia, mes, año);
 
 
+        System.out.println("La fecha ingresada es: " +f2.mostrarFecha());
 
     }
 }

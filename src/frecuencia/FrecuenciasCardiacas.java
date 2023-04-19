@@ -7,11 +7,52 @@ import java.time.Period;
 public class FrecuenciasCardiacas {
     String nombre;
     String apellido;
+    String sexo;
     int dia;
     int mes;
     int año;
+    double altura;
+    double peso;
+
+    //constructor
+
+
+    public FrecuenciasCardiacas(String nombre, String apellido, int dia, int mes, int año, String sexo, double altura, double peso) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.sexo = sexo;
+        this.dia = dia;
+        this.mes = mes;
+        this.año = año;
+        this.altura=altura;
+        this.peso=peso;
+
+
+
+
+    }
+
+    public FrecuenciasCardiacas(){
+
+    }
+
+
 
     //setter
+
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -32,9 +73,9 @@ public class FrecuenciasCardiacas {
         this.año = año;
     }
 
+
+
     //getter
-
-
     public String getNombre() {
         return nombre;
     }
@@ -55,7 +96,19 @@ public class FrecuenciasCardiacas {
         return año;
     }
 
+    public String getSexo() {
+        return sexo;
+    }
 
+    public double getAltura() {
+        return altura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    //metodos
     public int calcularEdad(){
         LocalDate fechaNacimiento = LocalDate.of(año, mes, dia);
         LocalDate fechaActual = LocalDate.now();
@@ -65,6 +118,17 @@ public class FrecuenciasCardiacas {
 
     public double frecuenciaCardiacaMaxima(){
         return 220-calcularEdad();
+    }
+
+    public String frecuenciaDeseada(){
+        double v=frecuenciaCardiacaMaxima()*0.50;
+        double v1=frecuenciaCardiacaMaxima()*0.80;
+        return v+" - "+v1;
+    }
+
+    public double obtenerIndiceDeMasaCorporal(){
+        double a2=altura*altura;
+        return peso/a2*10000;
     }
 
 

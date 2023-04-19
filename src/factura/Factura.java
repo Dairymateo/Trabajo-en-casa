@@ -11,7 +11,28 @@ public class Factura {
     private int cantidadPiezas;
 
 
-    //metodos
+   //constructores
+    public Factura(String numeroPieza, String descripcionPieza, double precioPieza, int cantidadPiezas) {
+        this.numeroPieza = numeroPieza;
+        this.descripcionPieza = descripcionPieza;
+        this.precioPieza = precioPieza;
+        this.cantidadPiezas = cantidadPiezas;
+        if (precioPieza<0){
+            precioPieza=0.0;
+        }
+        this.precioPieza=precioPieza;
+
+        if(cantidadPiezas<0){
+            cantidadPiezas=0;
+        }
+        this.cantidadPiezas=cantidadPiezas;
+    }
+
+    public Factura(){
+
+    }
+
+
 
 
     // Setter
@@ -29,7 +50,6 @@ public class Factura {
         }
         this.precioPieza=precioPieza;
     }
-
     public void setCantidadPiezas(int cantidadPiezas) {
         if(cantidadPiezas<0){
             cantidadPiezas=0;
@@ -37,9 +57,8 @@ public class Factura {
         this.cantidadPiezas=cantidadPiezas;
     }
 
+
     //Getter
-
-
     public String getNumeroPieza() {
         return numeroPieza;
     }
@@ -58,6 +77,5 @@ public class Factura {
 
     public double montoFactura(){
         return cantidadPiezas*precioPieza;
-
     }
 }

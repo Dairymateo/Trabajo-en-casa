@@ -7,10 +7,20 @@ public class Fecha {
 
     private int año;
 
+    //constructor
+
+
+    public Fecha(int mes, int dia, int año) {
+        this.mes = mes;
+        this.dia = dia;
+        this.año = año;
+    }
+
+    public Fecha(){
+
+    }
 
     //Setter
-
-
     public void setMes(int mes) {
         this.mes = mes;
     }
@@ -23,6 +33,21 @@ public class Fecha {
         this.año = año;
     }
 
+    //getter
+    public int getMes() {
+        return mes;
+    }
+
+    public int getDia() {
+        return dia;
+    }
+
+    public int getAño() {
+        return año;
+    }
+
+
+    //metodos
     public String mostrarFecha() {
         return mes+"/"+dia+"/"+año;
     }
