@@ -1,3 +1,5 @@
+package factura;
+
 public class Factura {
 
     private String numeroPieza;
@@ -22,11 +24,17 @@ public class Factura {
     }
 
     public void setPrecioPieza(double precioPieza) {
-        this.precioPieza = precioPieza;
+        if (precioPieza<0){
+            precioPieza=0.0;
+        }
+        this.precioPieza=precioPieza;
     }
 
     public void setCantidadPiezas(int cantidadPiezas) {
-        this.cantidadPiezas = cantidadPiezas;
+        if(cantidadPiezas<0){
+            cantidadPiezas=0;
+        }
+        this.cantidadPiezas=cantidadPiezas;
     }
 
     //Getter
