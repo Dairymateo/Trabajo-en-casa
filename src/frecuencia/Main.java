@@ -53,6 +53,7 @@ public class Main {
         System.out.println("Su frecuencia cardiaca maxima es: " +f2.frecuenciaCardiacaMaxima());
         System.out.println("Su frecuencia cardiaca esperada debería estar entre: " +f2.frecuenciaDeseada());
         System.out.println("Su sexo es: "+f2.getSexo());
+        System.out.printf("Fecha de nacimiento: " +f2.getDia()+"/"+f2.getMes()+"/"+ f1.getAño());
 
         System.out.println("========================");
 

@@ -1,15 +1,24 @@
 package empleado;
 
 public class Empleado {
-    private String Pnombre;
+    private String nombre;
     private String apellido;
     private double salarioMensual;
+
+    public Empleado(String nombre, String apellido, double salarioMensual) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.salarioMensual = salarioMensual;
+    }
+    public Empleado(){
+
+    }
 
     //setter
 
 
-    public void setPnombre(String pnombre) {
-        this.Pnombre = pnombre;
+    public void setnombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public void setApellido(String apellido) {
@@ -23,8 +32,8 @@ public class Empleado {
     //Getter
 
 
-    public String getPnombre() {
-        return Pnombre;
+    public String getNombre() {
+        return nombre;
     }
 
     public String getApellido() {
@@ -32,21 +41,15 @@ public class Empleado {
     }
 
     public double getSalarioMensual() {
-        return salarioMensual;
-    }
-
-    public double salarioAnual(){
         if(salarioMensual<0){
             salarioMensual=0;
         }
-        return salarioMensual*12;
-    }
+        return salarioMensual;
 
-    /*public double salarioMaster(){
-        return salarioAnual()*0.10;
-    }*/
-
-    public double salarioFinal(){
-        return salarioAnual()*1.10;
     }
 }
+
+
+
+
+
