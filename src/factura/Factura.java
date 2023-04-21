@@ -15,8 +15,6 @@ public class Factura {
     public Factura(String numeroPieza, String descripcionPieza, double precioPieza, int cantidadPiezas) {
         this.numeroPieza = numeroPieza;
         this.descripcionPieza = descripcionPieza;
-        this.precioPieza = precioPieza;
-        this.cantidadPiezas = cantidadPiezas;
         if (precioPieza<0){
             precioPieza=0.0;
         }

@@ -34,10 +34,10 @@ public class Main {
         int año = Integer.parseInt(sc.nextLine());
         f1.setAño(año);
         System.out.println("Ingrese su altura en cm (ej: 180): ");
-        int altura = Integer.parseInt(sc.nextLine());
+        double altura = Double.parseDouble(sc.nextLine());
         f1.setAltura(altura);
         System.out.println("Ingrese su peso en Kg(ej: 88)");
-        int peso = Integer.parseInt(sc.nextLine());
+        double peso = Double.parseDouble(sc.nextLine());
         f1.setPeso(peso);
 
 
